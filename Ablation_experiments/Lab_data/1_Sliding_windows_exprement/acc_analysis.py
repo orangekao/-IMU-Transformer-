@@ -57,4 +57,7 @@ print(f"Min: {float(min)}")
 print(f"Std: {float(std)}")
 print(f"Median: {float(median)}")
 print(f"Mean: {float(mean)}")
+
+
+print("git test")
     
