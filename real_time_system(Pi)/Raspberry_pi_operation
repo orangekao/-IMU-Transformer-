@@ -1,0 +1,36 @@
+Built miniconda:
+
+1.Download miniconda RAM64
+
+2.cd Download
+
+3.bash Miniconda3-latest-Linux-aarch64.sh
+
+4.conform env path:nano ~/.bashrc
+  if path == PATH="/home/lab506/miniconda3/bin:$PATH":
+	ctrl X and source ~/.bashrc(updata env path)
+  else:
+     change path to:"/home/lab506/miniconda3/bin:$PATH":
+	save and ctrl X and source ~/.bashrc(updata env path)
+
+5.Add conda-forge channel :
+  1.conda config --add channels conda-forge
+  2.conda config --set channel_priority strict
+
+6.Check conda version: conda --version
+
+7.Create conda env:conda create --name <name> python=3.9
+
+8.Activate env: conda activate <name> 
+
+9.Create file: mkdir <dir>
+
+10.create .py .txt: touch <name>.py and touch <name>.txt
+
+11.open .py .txt: nano <name> 
+
+pip env:
+
+1.torch:pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0pip3 install torch torchvision torchaudio
+
+2.numpy:pip install numpy==1.23.5

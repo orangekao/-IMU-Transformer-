@@ -1,0 +1,25 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下的狀態 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#CCCCCC"
+                android:endColor="#888888"
+                android:angle="270"/>
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#666666"/>
+        </shape>
+    </item>
+
+    <!-- 預設狀態 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#F0F0F0"
+                android:endColor="#AAAAAA"
+                android:angle="270"/>
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#888888"/>
+        </shape>
+    </item>
+</selector>

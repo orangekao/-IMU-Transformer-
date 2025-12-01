@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#CCCCCC">
+
+    <!-- 藍牙開關按鈕 -->
+    <Button
+        android:id="@+id/toggleButton"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="Press to connect!"
+        android:gravity="center"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 機率圖 -->
+
+<!--推論動作名稱8 12-->
+    <TextView
+        android:id="@+id/probability"
+        android:typeface="monospace"
+        android:layout_width="154dp"
+        android:layout_height="230dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inferenceResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--     推論動作圖示-->
+
+<!--     即時信號圖示-->
+<!--     按鈕下方左右水平置中-->
+
+    <View
+        android:id="@+id/connectionStatusLight"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/status_light_red"
+        app:layout_constraintBottom_toBottomOf="@id/toggleButton"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton"
+        app:layout_constraintTop_toTopOf="@id/toggleButton" />
+
+    <TextView
+        android:id="@+id/inferenceResult"
+        android:layout_width="138dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="147dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="84dp"
+        android:src="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:civ_border_color="#FF6200EE"
+        app:civ_border_width="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/signalChart"
+        android:layout_width="299dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/border"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
