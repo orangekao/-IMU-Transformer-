@@ -1,0 +1,24 @@
+python版本 : 
+python 3.9.0
+
+下載的包:
+"GUI"
+pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip install numpy==1.22.4
+pip install bleak
+pip install Matplotlib==3.4.2
+pip install pandas
+pip install openpyxl
+
+"鏡頭"
+pip install opencv-python
+
+
+建完conda執行 :
+pip install -r requirements.txt
+
+插好鏡頭、啟動Xsens DOT1
+
+執行:
+python GUI_real_time.py
+
